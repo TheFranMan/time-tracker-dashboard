@@ -10,8 +10,7 @@
 }
 
 .card {
-    $border-radius: .833em;
-    border-radius: $border-radius;
+    border-radius: var.$border-radius;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     color: var.$white;
@@ -52,7 +51,7 @@
     }
 
     &__body {
-        border-radius: $border-radius;
+        border-radius: var.$border-radius;
         background-color: var.$dark_blue;
         padding: 1.55556em 1.33333em;
         margin-top: auto;

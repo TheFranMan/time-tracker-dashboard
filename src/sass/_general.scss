@@ -4,6 +4,7 @@
     font-size: 62.5%;
     --fz-small: 1.5rem;
     --fz-reg:   1.8rem;
+    --fz-xreg:  2.4rem;
     --fz-lrg:   3.2rem;
 }
 
@@ -28,7 +29,7 @@ body {
 }
 
 .container {
-    width: 375px;
+    width: 327px;
     margin: 4.5em auto;
     font-size: var(--fz-reg);
 }

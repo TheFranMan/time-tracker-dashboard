@@ -1,0 +1,53 @@
+@use 'variables' as var;
+
+.controller {
+    background-color: var.$dark_blue;
+    margin-bottom: 1.33333em;
+    border-bottom-left-radius: var.$border-radius;
+    border-bottom-right-radius: var.$border-radius;
+
+    &__info {
+        display: flex;
+        padding: 1.94444em;
+        background-color: var.$blue;
+        border-radius: var.$border-radius;
+
+        &__avatar {
+            $dimension: 64px;
+            width: $dimension;
+            height: $dimension;
+            border: 3px solid var.$white;
+            border-radius: 50%;
+        }
+
+        &__details {
+            margin-left: 1.1111em;
+            font-size: var(--fz-small);
+            color: var.$pale_blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__name {
+                display: block;
+                font-size: var(--fz-xreg);
+                color: var.$white;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__timeframe {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 1.33333em 2.5em;
+        color: var.$desaturated_blue;
+
+        &__item {
+            &.active {
+                color: var.$white;
+            }
+        }
+    }
+}
