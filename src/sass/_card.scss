@@ -1,0 +1,192 @@
+@use 'variables' as var;
+
+@mixin dot {
+    $dimension: 5px;
+
+    width: $dimension;
+    height: $dimension;
+    background-color: var.$pale_blue;
+    border-radius: 50%;
+}
+
+.card {
+    $border-radius: .833em;
+    border-radius: $border-radius;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: var.$white;
+    margin-bottom: 1.33333em;
+    height: 160px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: 94% -10%;
+
+    &.work {
+        background-color: var.$light_orange;
+        background-image: url('../images/icon-work.svg');
+    }
+
+    &.play {
+        background-color: var.$soft_blue;
+        background-image: url('../images/icon-play.svg');
+    }
+
+    &.study {
+        background-color: var.$light_red;
+        background-image: url('../images/icon-study.svg');
+    }
+
+    &.exercise {
+        background-color: var.$lime_green;
+        background-image: url('../images/icon-exercise.svg');
+    }
+
+    &.social {
+        background-color: var.$violet;
+        background-image: url('../images/icon-social.svg');
+    }
+
+    &.self-care {
+        background-color: var.$soft_orange;
+        background-image: url('../images/icon-self-care.svg');
+    }
+
+    &__body {
+        border-radius: $border-radius;
+        background-color: var.$dark_blue;
+        padding: 1.55556em 1.33333em;
+        margin-top: auto;
+        width: 100%;
+
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.33333em;
+
+            &__title {
+                font-weight: 500;
+            }
+
+            &__settings {
+                position: relative;
+                @include dot;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                }
+
+                &::before {
+                    @include dot;
+                    right: 200%;
+                }
+
+                &::after {
+                    @include dot;
+                    right: 400%;
+                }
+            }
+        }
+
+        &__time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__current {
+                font-size: var(--fz-lrg);
+                font-weight: 300;
+            }
+
+            &__previous {
+                font-size: var(--fz-small);
+                color: var.$pale_blue;
+            }
+        }
+    }
+}
+
+// .card {
+//     $border-radius: .833em;
+//     background-color: var.$dark_blue;
+//     border-radius: $border-radius;
+//     color: var.$white;
+//     margin-bottom: 1.33333em;
+//     background-color: var.$light_orange;
+
+
+
+//     &__top {
+//         width: 100%;
+//         height: 58px;
+//         border-top-left-radius: $border-radius;
+//         border-top-right-radius: $border-radius;
+//         position: relative;
+
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             width: 100%;
+//             bottom: 0;
+//             background-color: var.$dark_blue;
+//             height: 20px;
+//             border-top-left-radius: $border-radius;
+//             border-top-right-radius: $border-radius;
+//         }
+//     }
+
+//     &__bottom {
+//         padding: 1.55em 1.33em;
+
+//         &__heading {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             margin-bottom: 0.33333em;
+
+//             &__title {
+//                 font-weight: 500;
+//             }
+
+//             &__settings {
+//                 position: relative;
+//                 @include dot;
+
+//                 &::before,
+//                 &::after {
+//                     content: "";
+//                     position: absolute;
+//                 }
+
+//                 &::before {
+//                     @include dot;
+//                     right: 200%;
+//                 }
+
+//                 &::after {
+//                     @include dot;
+//                     right: 400%;
+//                 }
+//             }
+//         }
+
+//         &__time {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+
+//             &__current {
+//                 font-size: var(--fz-lrg);
+//                 font-weight: 300;
+//             }
+
+//             &__previous {
+//                 font-size: var(--fz-small);
+//                 color: var.$pale_blue;
+//             }
+//         }
+//     }
+
+// }
