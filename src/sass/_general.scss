@@ -6,6 +6,8 @@
     --fz-reg:   1.8rem;
     --fz-xreg:  2.4rem;
     --fz-lrg:   3.2rem;
+    --fz-xlrg:  4.0rem;
+    --fz-xxlrg: 5.6rem;
 }
 
 *,
@@ -32,4 +34,12 @@ body {
     width: 327px;
     margin: 4.5em auto;
     font-size: var(--fz-reg);
+
+    @media (min-width: var.$desktop) {
+        width: 1110px;
+        height: 518px;
+        display: flex;
+        margin-top: 14.05556em;
+        margin-bottom: 14.05556em;
+    }
 }

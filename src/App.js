@@ -20,7 +20,9 @@ class App extends React.Component {
     return (
       <div className="container">
         <Controller/>
-        { cards }
+        <div className="cards">
+          { cards }
+        </div>
       </div>
     )
   }

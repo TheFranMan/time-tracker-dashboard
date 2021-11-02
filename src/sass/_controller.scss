@@ -6,11 +6,25 @@
     border-bottom-left-radius: var.$border-radius;
     border-bottom-right-radius: var.$border-radius;
 
+    @media (min-width: var.$desktop) {
+        margin-bottom: 0;
+        margin-right: 1.66667em;
+        width: 255px;
+    }
+
     &__info {
         display: flex;
         padding: 1.94444em;
         background-color: var.$blue;
         border-radius: var.$border-radius;
+
+        @media (min-width: var.$desktop) {
+            padding: 2.055556em;
+            display: flex;
+            flex-direction: column;
+            // height: 354px;
+            height: 68.34%;
+        }
 
         &__avatar {
             $dimension: 64px;
@@ -18,6 +32,12 @@
             height: $dimension;
             border: 3px solid var.$white;
             border-radius: 50%;
+
+            @media (min-width: var.$desktop) {
+                $dimension: 78px;
+                width: $dimension;
+                height: $dimension;
+            }
         }
 
         &__details {
@@ -28,11 +48,21 @@
             flex-direction: column;
             justify-content: center;
 
+            @media (min-width: var.$desktop) {
+                margin-top: 2.3889em;
+                margin-left: 0;
+                width: 138px;
+            }
+
             &__name {
                 display: block;
                 font-size: var(--fz-xreg);
                 color: var.$white;
                 font-weight: 300;
+
+                @media (min-width: var.$desktop) {
+                    font-size: var(--fz-xlrg);
+                }
             }
         }
     }
@@ -44,9 +74,22 @@
         padding: 1.33333em 2.5em;
         color: var.$desaturated_blue;
 
+        @media (min-width: var.$desktop) {
+            // height: 68.34%;
+            height: 31.66%;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.7778em;
+        }
+
         &__item {
-            &.active {
+            &.active,
+            &:hover {
                 color: var.$white;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
     }
