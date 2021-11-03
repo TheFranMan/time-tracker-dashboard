@@ -56,7 +56,12 @@ class App extends React.Component {
 
   render() {
     let cards = data.map(d => (
-      <Card key={d.title} title={this.formatTitle(d.title)} timeframe={this.state.currentTimeframe[this.formatTitle(d.title)]}/>
+      <Card
+        key={d.title}
+        title={this.formatTitle(d.title)}
+        timeframe={this.state.currentTimeframe[this.formatTitle(d.title)]}
+        currentUnit={this.state.currentUnit}
+      />
     ))
 
     return (
