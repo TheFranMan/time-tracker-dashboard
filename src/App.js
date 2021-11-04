@@ -3,7 +3,7 @@ import './sass/main.scss';
 import data from './data.json';
 import Card from './Card.js';
 import Controller from './Controller.js';
-import { daily, weekly, monthly } from './common.js';
+import { daily, weekly, monthly, formatTitle } from './common.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class App extends React.Component {
 
     data.forEach(e => {
       [daily, weekly, monthly].forEach(t => {
-        newData[t][this.formatTitle(e.title)] = e.timeframes[t]
+        newData[t][formatTitle(e.title)] = e.timeframes[t]
       })
     })
 
@@ -50,16 +50,12 @@ class App extends React.Component {
     }))
   }
 
-  formatTitle = (title) => {
-    return title.toLowerCase().replace(" ", "")
-}
-
   render() {
     let cards = data.map(d => (
       <Card
         key={d.title}
-        title={this.formatTitle(d.title)}
-        timeframe={this.state.currentTimeframe[this.formatTitle(d.title)]}
+        title={d.title}
+        timeframe={this.state.currentTimeframe[formatTitle(d.title)]}
         currentUnit={this.state.currentUnit}
       />
     ))

@@ -1,4 +1,4 @@
-import { daily, weekly, monthly } from './common.js';
+import { daily, weekly, monthly, formatTitle } from './common.js';
 
 export default function Card(props) {
     const getPreviousText = () => {
@@ -22,7 +22,7 @@ export default function Card(props) {
     }
 
     return (
-        <div className={`card ${ props.title }`}>
+        <div className={`card ${ formatTitle(props.title) }`}>
             <div className="card__body">
                 <div className="card__body__heading">
                      <div className="card__body__heading__title">{ props.title }</div>
