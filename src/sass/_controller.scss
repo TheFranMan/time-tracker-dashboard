@@ -26,7 +26,7 @@
         }
 
         &__avatar {
-            $dimension: 75px;
+            $dimension: 70px;
             width: $dimension;
             height: $dimension;
             border: 3px solid var.$white;
@@ -48,7 +48,7 @@
             justify-content: center;
 
             @media (min-width: var.$desktop) {
-                margin-top: 4em;
+                margin-top: 3em;
                 margin-left: 0;
                 width: 138px;
             }
@@ -78,7 +78,7 @@
             height: 31.66%;
             flex-direction: column;
             justify-content: space-between;
-            padding: 1.6em 1.9em 1.85em;
+            padding: 1.5em 1.9em 1.85em;
         }
 
         &__item {
