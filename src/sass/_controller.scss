@@ -35,7 +35,7 @@
             border-radius: 50%;
 
             @media (min-width: var.$desktop) {
-                $dimension: 80px;
+                $dimension: 83px;
                 width: $dimension;
                 height: $dimension;
             }
@@ -50,7 +50,7 @@
             justify-content: center;
 
             @media (min-width: var.$desktop) {
-                margin-top: 3em;
+                margin-top: 2.8em;
                 margin-left: 0;
                 width: 138px;
             }
