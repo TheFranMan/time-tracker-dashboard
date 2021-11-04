@@ -62,7 +62,6 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        <h1 class="sr-only">Time Tracking Dashboard</h1>
         <Controller onClick={this.handleTimeframeChange} currentUnit={this.state.currentUnit} />
         <div className="cards">
           { cards }

@@ -10,9 +10,9 @@ export default function Controller(props) {
         <div className="controller">
             <div className="controller__info">
                 <img className="controller__info__avatar" src={avatar} alt="" />
-                <div className="controller__info__details">
+                <h1 className="controller__info__details">
                     Report for <span className="controller__info__details__name">Jeremy Robson</span>
-                </div>
+                </h1>
             </div>
             <ul className="controller__timeframe">
                 <li className={`controller__timeframe__item ${ getActiveClass(daily)} `} onClick={ () => props.onClick(daily)}>Daily</li>
